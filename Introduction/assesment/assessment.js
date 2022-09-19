@@ -1,4 +1,9 @@
 'use strict';
+//結果格納場所
+const userNameInput = document.getElementById('user-name');
+const assessmentButton = document.getElementById('assessment');
+const resultDivided = document.getElementById('result-area');
+//診断結果テンプレート
 const answers = [
   '{userName}のいいところは声です。{userName}の特徴的な声は皆を惹きつけ、心に残ります。',
   '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
@@ -35,6 +40,14 @@ function assessment(userName){
   result = result.replaceAll('{userName}',userName)
   return result;
 }
+// ボタンが押された場合の処理
+const tweetDivided = document.getElementById('tweet-area');
+assessmentButton.onclick = () => {
+  console.log('ボタンが押された')
+  //TODO 診断結果表示エリア作成
+  //TODO ツイートエリア作成
+}
+
 
 //テスト
 console.assert(assessment('太郎') === '太郎のいいところは決断力です。太郎がする決断にいつも助けられる人がいます。',
