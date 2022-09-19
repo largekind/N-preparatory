@@ -60,6 +60,8 @@ assessmentButton.onclick = () => {
   resultDivided.appendChild(paragraph)
 
   //TODO ツイートエリア作成
+  // tweet-areaを一度消去
+  tweetDivided.innerText = ''
 }
 
 
