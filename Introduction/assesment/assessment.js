@@ -76,6 +76,12 @@ assessmentButton.onclick = () => {
   tweetDivided.appendChild(script);
 }
 
+//テキストボックス上でEnter押された場合の処理
+userNameInput.onkeydown = event => {
+  if (event.key === 'Enter') {
+    assessmentButton.onclick();
+  }
+};
 
 //テスト
 console.assert(assessment('太郎') === '太郎のいいところは決断力です。太郎がする決断にいつも助けられる人がいます。',
