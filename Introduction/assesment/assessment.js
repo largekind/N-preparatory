@@ -24,6 +24,18 @@ const answers = [
  * @return {string} 診断結果
  */
 function assessment(userName){
-  //TODO 診断結果を実装
-  return '';
+  //全文字コードの番号を取得、総和を出す
+  let sumOfCharCode = 0;
+  for(let i=0; i< userName.length;i++){
+    sumOfCharCode += userName.charCodeAt(i); //文字コードを数値化して足す
+  }
+  //文字コード番号の合計 / 回答数で割って添え字を出す
+  const index = sumOfCharCode % answers.length;
+  const result = answers[index];
+  // TODO {userName}をユーザー名に置き換え
+  return result;
 }
+
+console.log(assessment('太郎'));
+console.log(assessment('次郎'));
+console.log(assessment('太郎'));
