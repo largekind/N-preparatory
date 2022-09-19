@@ -17,3 +17,13 @@ const answers = [
   '{userName}のいいところはその全てです。ありのままの{userName}自身がいいところなのです。',
   '{userName}のいいところは自制心です。やばいと思ったときにしっかりと衝動を抑えられる{userName}が皆から評価されています。'
 ];
+
+/**
+ * 文字列から診断結果を返す
+ * @param {string} userName ユーザ名
+ * @return {string} 診断結果
+ */
+function assessment(userName){
+  //TODO 診断結果を実装
+  return '';
+}
