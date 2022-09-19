@@ -59,11 +59,10 @@ assessmentButton.onclick = () => {
   paragraph.innerText = result;
   resultDivided.appendChild(paragraph)
 
-  //TODO ツイートエリア作成
-  // tweet-areaを一度消去
+  //ツイートエリア作成
   tweetDivided.innerText = '';
   const anchor = document.createElement('a');
-  const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=あなたのいいところ&ref_src=twsrc%5Etfw'
+  const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag='+ encodeURIComponent('あなたのいいところ')+'&ref_src=twsrc%5Etfw'
 
   anchor.setAttribute('href',hrefValue);
   anchor.setAttribute('class','twitter-hashtag-button');
