@@ -31,8 +31,8 @@ function assessment(userName){
   }
   //文字コード番号の合計 / 回答数で割って添え字を出す
   const index = sumOfCharCode % answers.length;
-  const result = answers[index];
-  // TODO {userName}をユーザー名に置き換え
+  let result = answers[index];
+  result = result.replaceAll('{userName}',userName)
   return result;
 }
 
