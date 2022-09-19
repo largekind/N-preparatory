@@ -55,13 +55,26 @@ assessmentButton.onclick = () => {
   resultDivided.appendChild(header);
 
   const paragraph = document.createElement('p');
-  const result = assessment(userName)
+  const result = assessment(userName);
   paragraph.innerText = result;
   resultDivided.appendChild(paragraph)
 
   //TODO ツイートエリア作成
   // tweet-areaを一度消去
-  tweetDivided.innerText = ''
+  tweetDivided.innerText = '';
+  const anchor = document.createElement('a');
+  const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=あなたのいいところ&ref_src=twsrc%5Etfw'
+
+  anchor.setAttribute('href',hrefValue);
+  anchor.setAttribute('class','twitter-hashtag-button');
+  anchor.setAttribute('data-text',result);
+  anchor.innerText = 'Tweet #あなたのいいところ';
+  tweetDivided.appendChild(anchor);
+
+  //Twitter widgetsの実行
+  const script = document.createElement('script');
+  script.setAttribute('src','https://platform.twitter.com/widgets.js');
+  tweetDivided.appendChild(script);
 }
 
 
