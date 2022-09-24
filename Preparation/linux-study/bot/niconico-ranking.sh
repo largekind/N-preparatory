@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirname="niconico-ranking-rss"
+dirname="/linux-study/bot/niconico-ranking-rss"
 echo $dirname
 
 mkdir -p $dirname
