@@ -1,3 +1,5 @@
 [submodule "Introduction/assessment"]
 	path = Introduction/assessment
 	url = https://github.com/largekind/assessment
+[submodule "Preparation/intro-curriculum-3001"]
+	path = Preparation/intro-curriculum-3001
