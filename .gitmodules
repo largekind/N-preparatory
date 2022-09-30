@@ -7,3 +7,6 @@
 [submodule "Preparation/fibonacci"]
 	path = Preparation/fibonacci
 	url = https://github.com/largekind/fibonacci
+[submodule "Preparation/intro-curriculum-3002"]
+	path = Preparation/intro-curriculum-3002
+	url = https://github.com/largekind/intro-curriculum-3002
