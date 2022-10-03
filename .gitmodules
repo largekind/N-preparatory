@@ -19,3 +19,6 @@
 [submodule "Preparation/yarn-training"]
 	path = Preparation/yarn-training
 	url = https://github.com/largekind/yarn-training
+[submodule "Preparation/intro-curriculum-3004"]
+	path = Preparation/intro-curriculum-3004
+	url = https://github.com/largekind/intro-curriculum-3004
