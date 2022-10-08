@@ -22,3 +22,9 @@
 [submodule "Preparation/intro-curriculum-3004"]
 	path = Preparation/intro-curriculum-3004
 	url = https://github.com/largekind/intro-curriculum-3004
+[submodule "Preparation/slack-bot-study"]
+	path = Preparation/slack-bot-study
+	url = https://github.com/largekind/slack-bot-study
+[submodule "Preparation/intro-curriculum-3006"]
+	path = Preparation/intro-curriculum-3006
+	url = https://github.com/largekind/intro-curriculum-3006
