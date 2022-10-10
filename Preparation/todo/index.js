@@ -39,9 +39,22 @@ function donelist() {
     .map(task => task.name);
 }
 
+/**
+ * 項目を削除する
+ * @param {string} taskName
+ */
+function del(taskName) {
+  const indexFound = tasks.findIndex(task => task.name === taskName);
+  if (indexFound !== -1) {
+    tasks.splice(indexFound, 1); //spliceメソッドでindexFoundの箇所の要素を1つ削除
+  }
+}
+
+//外部で使用するモジュールの列挙
 module.exports = {
   add,
   list,
   done,
-  donelist
+  donelist,
+  del
 };
