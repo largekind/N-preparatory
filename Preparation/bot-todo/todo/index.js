@@ -10,12 +10,30 @@ function add(taskName) {
   tasks.push({ name: taskName, isDone: false });
 }
 /**
+ * タスクと完了したかどうかが含まれるオブジェクトを受け取り、完了したかを返す
+ * @param {object} task
+ * @return {boolean} 完了したかどうか
+ */
+function isDone(task) {
+  return task.isDone;
+}
+
+/**
+ * タスクと完了したかどうかが含まれるオブジェクトを受け取り、完了していないかを返す
+ * @param {object} task
+ * @return {boolean} 完了していないかどうか
+ */
+function isNotDone(task) {
+  return !isDone(task);
+}
+
+/**
  * タスクの一覧の配列を取得する
  * @return {array}
  */
 function list() {
   return tasks
-    .filter(task => !task.isDone) //task.isDoneがfalseになるものだけ列挙(未完了のリストを列挙)
+    .filter(task => isNotDone(task)) //task.isDoneがfalseになるものだけ列挙(未完了のリストを列挙)
     .map(task => task.name); //配列taskからtask.nameを取得して、その値だけを出力
 }
 /**
@@ -35,7 +53,7 @@ function done(taskName) {
  */
 function donelist() {
   return tasks
-    .filter(task => task.isDone) //isDoneがtureであるリストの名前を列挙
+    .filter(task => isDone(task)) //isDoneがtureであるリストの名前を列挙
     .map(task => task.name);
 }
 
