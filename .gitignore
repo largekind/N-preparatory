@@ -1,3 +1,7 @@
 # bot directory
 niconico-ranking-rss
 /Preparation/linux-study/bot/itunes-topsong-rss
+
+# yarn data
+.env
+node_modules
