@@ -37,3 +37,6 @@
 [submodule "Preparation/async-io-problem"]
 	path = Preparation/async-io-problem
 	url = https://github.com/largekind/async-io-problem
+[submodule "Preparation/intro-curriculum-3009"]
+	path = Preparation/intro-curriculum-3009
+	url = https://github.com/largekind/intro-curriculum-3009
