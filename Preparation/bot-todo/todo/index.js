@@ -1,6 +1,23 @@
 'use strict';
 // { name: タスクの名前, isDone: 完了しているかどうかの真偽値 }
-const tasks = [];
+let tasks = [];
+
+const fs = require('fs');
+const fileName = './tasks.json';
+
+// 同期的にファイルから復元 例外処理
+try {
+  const data = fs.readFileSync(fileName, 'utf8');
+  tasks = JSON.parse(data);
+} catch (err) {
+  console.log(`${fileName}から復元できませんでした`);
+}
+/**
+ * タスクをファイルに保存する
+ */
+function saveTasks() {
+  fs.writeFileSync(fileName, JSON.stringify(tasks), 'utf8');
+}
 
 /**
  * タスクを追加する
@@ -8,6 +25,7 @@ const tasks = [];
  */
 function add(taskName) {
   tasks.push({ name: taskName, isDone: false });
+  saveTasks();
 }
 /**
  * タスクと完了したかどうかが含まれるオブジェクトを受け取り、完了したかを返す
@@ -45,6 +63,7 @@ function done(taskName) {
   if (indexFound !== -1) { //-1外であれば発見、その要素のisDoneフラグを立てる
     tasks[indexFound].isDone = true;
   }
+  saveTasks();
 }
 
 /**
@@ -66,6 +85,7 @@ function del(taskName) {
   if (indexFound !== -1) {
     tasks.splice(indexFound, 1); //spliceメソッドでindexFoundの箇所の要素を1つ削除
   }
+  saveTasks();
 }
 
 //外部で使用するモジュールの列挙

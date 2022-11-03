@@ -40,3 +40,6 @@
 [submodule "Preparation/intro-curriculum-3009"]
 	path = Preparation/intro-curriculum-3009
 	url = https://github.com/largekind/intro-curriculum-3009
+[submodule "Preparation/intro-curriculum-3010"]
+	path = Preparation/intro-curriculum-3010
+	url = https://github.com/largekind/intro-curriculum-3010
