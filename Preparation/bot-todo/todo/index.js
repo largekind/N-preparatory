@@ -1,10 +1,17 @@
 'use strict';
 // { name: タスクの名前, isDone: 完了しているかどうかの真偽値 }
-const tasks = [];
+let tasks = [];
 
 const fs = require('fs');
 const fileName = './tasks.json';
 
+// 同期的にファイルから復元 例外処理
+try {
+  const data = fs.readFileSync(fileName, 'utf8');
+  tasks = JSON.parse(data);
+} catch (err) {
+  console.log(`${fileName}から復元できませんでした`);
+}
 /**
  * タスクをファイルに保存する
  */
