@@ -46,3 +46,6 @@
 [submodule "Preparation/node-js-http-3016"]
 	path = Preparation/node-js-http-3016
 	url = https://github.com/largekind/node-js-http-3016
+[submodule "Preparation/intro-curriculum-3012"]
+	path = Preparation/intro-curriculum-3012
+	url = https://github.com/largekind/intro-curriculum-3012
